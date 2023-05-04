@@ -94,6 +94,7 @@ nav {
     justify-content: center;
     gap: 3rem;
     transition: 0.3s;
+    z-index: 999;
   }
   .navlinks__col2 {
     justify-content: center;
