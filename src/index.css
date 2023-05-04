@@ -43,6 +43,9 @@ img {
 .app__container {
   position: relative;
 }
+.main__container {
+  min-height: calc(100vh - 275px);
+}
 /* nav Toggle classes */
 .toggleNav.navlinks__row {
   right: 0;

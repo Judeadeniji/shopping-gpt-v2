@@ -1,10 +1,26 @@
 .product__items {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
   row-gap: 3rem;
   column-gap: 2rem;
+  margin-bottom: 8rem;
+}
+.display__loading,
+.display__error {
+  margin-top: 40px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.display__loading {
+  width: 100px;
+}
+.display__error {
+  font-weight: 300;
 }
 @media screen and (max-width: 1074px) {
   .product__items {

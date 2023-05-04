@@ -1,5 +1,6 @@
 header {
   padding: 1.8rem 4rem;
+  margin-bottom: 4.5rem;
 }
 @media screen and (max-width: 576px) {
   header {
