@@ -13,6 +13,13 @@ const NavBar = () => {
     burgerTwo.current.classList.toggle("toggleNav");
     burgerThree.current.classList.toggle("toggleNav");
   };
+  document.addEventListener("scroll", () => {
+    if (scrollY > 20) {
+      navlinks__row.current.style.top = "0";
+    } else if (scrollY === 0) {
+      navlinks__row.current.style.top = "65px";
+    }
+  });
   return (
     <nav className="nav">
       <div className="nav__logo">Shopping GPT</div>
