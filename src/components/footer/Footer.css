@@ -30,3 +30,10 @@
   );
   border-radius: 0.6rem;
 }
+@media screen and (max-width: 608px) {
+  .link--rows {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
