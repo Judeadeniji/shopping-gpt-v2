@@ -1,0 +1,25 @@
+.product__card {
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 0 0 1.5px rgba(134, 142, 150, 0.182);
+  border-radius: 1rem;
+  padding: 1.5rem 2.5rem;
+}
+.product__card__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100px;
+}
+.product__card__context {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  align-self: start;
+  height: 120px;
+}

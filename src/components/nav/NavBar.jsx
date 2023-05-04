@@ -15,9 +15,11 @@ const NavBar = () => {
         </form>
         {/* nav livks col 2 */}
         <div className="navlinks__col2">
-          <i className="fa-regular fa-bell"></i>
-          <i className="fa-regular fa-user"></i>
-          <i className="fa-solid fa-bag-shopping"></i>
+          <i className="fa-regular fa-bell nav__icon" />
+          <i className="fa-regular fa-user nav__icon" />
+          <i className="fa-solid fa-bag-shopping nav__icon__shopping__bag">
+            <div className="cart__items__number">{1}</div>
+          </i>
         </div>
       </div>
     </nav>

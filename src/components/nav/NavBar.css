@@ -13,7 +13,7 @@ nav {
 .navlinks__row {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 60%;
 }
 .navlinks__col1 {
   display: flex;
@@ -46,4 +46,36 @@ nav {
   width: 28px;
   font-size: 1.4rem;
   border-radius: 50%;
+}
+.navlinks__col2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.nav__icon {
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+.nav__icon__shopping__bag {
+  position: relative;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+.cart__items__number {
+  height: 18px;
+  width: 18px;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(227, 36, 36);
+  color: var(--light-color);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  top: -35%;
+  right: -45%;
 }
