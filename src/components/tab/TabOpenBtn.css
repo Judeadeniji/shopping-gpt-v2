@@ -1,0 +1,9 @@
+.tab__open {
+  cursor: pointer;
+  color: rgb(157, 156, 156);
+  font-size: 2.4rem;
+  position: absolute;
+  left: 3%;
+  top: -60px;
+  z-index: 624;
+}

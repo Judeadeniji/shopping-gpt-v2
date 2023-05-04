@@ -9,6 +9,7 @@
   border-radius: 1rem;
   padding: 1.5rem 2rem;
   background: #fff;
+  cursor: pointer;
 }
 .product__card__image {
   display: flex;
@@ -43,6 +44,7 @@
   color: var(--light-color);
   align-self: start;
   transition: 0.4s;
+  cursor: pointer;
 }
 .product__card__btn:hover {
   background: var(--light-color);
