@@ -83,13 +83,13 @@ nav {
 @media screen and (max-width: 764px) {
   .navlinks__row {
     position: fixed;
-    top: 70px;
+    top: 65px;
     right: -2000px;
     flex-direction: column;
     background: var(--dark-color);
     color: var(--light-color);
     padding: 2rem 2rem;
-    width: 50%;
+    width: 100%;
     height: 100vh;
     justify-content: center;
     gap: 3rem;
