@@ -1,8 +1,12 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import "./NavBar.css";
 import NavBarToggle from "./NavBarToggle";
+import { CartNumbersContext } from "../../contexts/CartNumbersContext";
 
 const NavBar = () => {
+  //
+  const { cartItemNumber } = useContext(CartNumbersContext);
+  //
   const navlinks__row = useRef();
   const burgerOne = useRef();
   const burgerTwo = useRef();
@@ -36,7 +40,7 @@ const NavBar = () => {
           <i className="fa-regular fa-bell nav__icon" />
           <i className="fa-regular fa-user nav__icon" />
           <i className="fa-solid fa-bag-shopping nav__icon__shopping__bag">
-            <div className="cart__items__number">{0}</div>
+            <div className="cart__items__number">{cartItemNumber}</div>
           </i>
         </div>
       </div>

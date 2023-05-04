@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import "./ProductCard.css";
 import { v4 as uuidv4 } from "uuid";
+import { CartNumbersContext } from "../../contexts/CartNumbersContext";
 
 const ProductCard = ({ product }) => {
+  //
+  const { increItemNums } = useContext(CartNumbersContext);
   // set product title limit
   const titleLimit = 20;
   const truncateTitle = (title) => {
@@ -44,7 +48,9 @@ const ProductCard = ({ product }) => {
               {product.rating.rate}&nbsp;Reviews
             </div>
           </div>
-          <button className="product__card__btn">Add To Cart</button>
+          <button className="product__card__btn" onClick={increItemNums}>
+            Add To Cart
+          </button>
         </div>
       </div>
     </div>
