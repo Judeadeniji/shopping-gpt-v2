@@ -17,7 +17,7 @@ const Tab = () => {
   };
   return (
     <>
-      {!isTabOpen ? (
+      {isTabOpen === true ? (
         <section className="category--tab">
           <div
             className="category--tab--h1"
@@ -234,7 +234,7 @@ const Tab = () => {
       ) : (
         <></>
       )}
-      {isTabOpen ? <TabOpenBtn openTab={openTab} /> : <></>}
+      {isTabOpen === false ? <TabOpenBtn openTab={openTab} /> : <></>}
     </>
   );
 };
