@@ -1,0 +1,49 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  font-family: "Baumans", cursive;
+  font-size: 2.4rem;
+  color: var(--main-color);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+.navlinks__row {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.navlinks__col1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  box-shadow: 0 0 0 1.5px var(--grey-two);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+}
+.navlinks__col1 input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0.8rem 0 0.8rem 1rem;
+}
+.search__product__btn {
+  border: 0;
+  outline: 0;
+  color: var(--light-color);
+  background: transparent;
+  cursor: pointer;
+}
+.search__product__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-color);
+  height: 28px;
+  width: 28px;
+  font-size: 1.4rem;
+  border-radius: 50%;
+}
