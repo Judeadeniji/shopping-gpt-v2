@@ -1,8 +1,9 @@
 import "./ProductCard.css";
+import { v4 as uuidv4 } from "uuid";
 
 const ProductCard = ({ product }) => {
   // set product title limit
-  const titleLimit = 30;
+  const titleLimit = 20;
   const truncateTitle = (title) => {
     if (title.length > titleLimit) {
       let slicedTitle = title.slice(0, titleLimit);
@@ -12,7 +13,7 @@ const ProductCard = ({ product }) => {
   };
   // product review star display
   const productReviewStar = [1, 2, 3, 4, 5].map((rate) => (
-    <span>
+    <span key={uuidv4()}>
       <i
         className={
           product.rating.rate === rate + 0.5
@@ -39,7 +40,9 @@ const ProductCard = ({ product }) => {
         <div className="product__card__reviewAndBtn">
           <div className="product__card__review">
             {productReviewStar}
-            <div className="product__card__reviews">{product.rating.rate}</div>
+            <div className="product__card__reviews">
+              {product.rating.rate}&nbsp;Reviews
+            </div>
           </div>
           <button className="product__card__btn">Add To Cart</button>
         </div>

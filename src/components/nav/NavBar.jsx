@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./NavBar.css";
+import NavBarToggle from "./NavBarToggle";
 
 const NavBar = () => {
+  const navlinks__row = useRef();
+  const burgerOne = useRef();
+  const burgerTwo = useRef();
+  const burgerThree = useRef();
+  const handleToggleNav = () => {
+    navlinks__row.current.classList.toggle("toggleNav");
+    burgerOne.current.classList.toggle("toggleNav");
+    burgerTwo.current.classList.toggle("toggleNav");
+    burgerThree.current.classList.toggle("toggleNav");
+  };
   return (
     <nav className="nav">
       <div className="nav__logo">Shopping GPT</div>
-      <div className="navlinks__row">
+      <div className="navlinks__row" ref={navlinks__row}>
         {/* nav livks col 1 */}
         <form className="navlinks__col1">
           <input type="text" placeholder="search product" />
@@ -18,10 +29,16 @@ const NavBar = () => {
           <i className="fa-regular fa-bell nav__icon" />
           <i className="fa-regular fa-user nav__icon" />
           <i className="fa-solid fa-bag-shopping nav__icon__shopping__bag">
-            <div className="cart__items__number">{1}</div>
+            <div className="cart__items__number">{0}</div>
           </i>
         </div>
       </div>
+      <NavBarToggle
+        handleToggleNav={handleToggleNav}
+        burgerOne={burgerOne}
+        burgerTwo={burgerTwo}
+        burgerThree={burgerThree}
+      />
     </nav>
   );
 };

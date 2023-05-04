@@ -40,3 +40,19 @@ body::-webkit-scrollbar-thumb {
 img {
   width: 100%;
 }
+.app__container {
+  position: relative;
+}
+/* nav Toggle classes */
+.toggleNav.navlinks__row {
+  right: 0;
+}
+.toggleNav.burger__one {
+  transform: rotate(-45deg) translate(0, 8px);
+}
+.toggleNav.burger__two {
+  display: none;
+}
+.toggleNav.burger__three {
+  transform: rotate(45deg) translate(0, -8px);
+}

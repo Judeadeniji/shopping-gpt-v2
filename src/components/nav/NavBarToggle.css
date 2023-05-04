@@ -1,0 +1,20 @@
+.hamburger {
+  display: none;
+}
+.burger {
+  background: rgb(144, 150, 157);
+  border-radius: 1rem;
+  margin-top: 0.8rem;
+  height: 3px;
+  width: 45px;
+  transition: 0.3s;
+}
+.burger__one {
+  margin-top: 0;
+}
+@media screen and (max-width: 764px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
