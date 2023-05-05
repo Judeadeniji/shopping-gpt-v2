@@ -1,16 +1,21 @@
 import { useState, createContext } from "react";
+import useFetch from "../hooks/useFetch";
 export const CartNumbersContext = createContext();
 
 const CartNumbersContextProvider = ({ children }) => {
-  const [cartItemNumber, setCartItemNumber] = useState(0);
+  const { data: product } = useFetch("https://fakestoreapi.com/products");
   const [cartItems, setCartItems] = useState([]);
-  const increItemNums = () => {
-    setCartItemNumber(cartItemNumber + 1);
+  const saveCartItems = (id) => {
+    const saveItems = [
+      ...cartItems,
+      { productTitle: product.title, id: product.id },
+    ];
+    setCartItems(saveItems);
   };
 
   return (
     <CartNumbersContext.Provider
-      value={{ cartItemNumber, increItemNums, cartItems, setCartItems }}
+      value={{ cartItems, saveCartItems, setCartItems }}
     >
       {children}
     </CartNumbersContext.Provider>

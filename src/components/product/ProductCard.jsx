@@ -6,8 +6,10 @@ import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   //
-  const { increItemNums, cartItems, setCartItems } =
+  const { saveCartItems, cartItems, setCartItems } =
     useContext(CartNumbersContext);
+  //
+  console.log(cartItems);
   // set product title limit
   const titleLimit = 20;
   const truncateTitle = (title) => {
@@ -18,9 +20,6 @@ const ProductCard = ({ product }) => {
     return title;
   };
   //
-  const saveCartItems = (value) => {
-    setCartItems();
-  };
   // console.log(cartItems);
   // product review star display
   const productReviewStar = [1, 2, 3, 4, 5].map((rate) => (
@@ -52,7 +51,10 @@ const ProductCard = ({ product }) => {
               {product.rating.rate}&nbsp;Reviews
             </div>
           </div>
-          <button className="product__card__btn" onClick={saveCartItems}>
+          <button
+            className="product__card__btn"
+            onClick={() => saveCartItems(product.id)}
+          >
             Add To Cart
           </button>
         </div>
