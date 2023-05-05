@@ -16,10 +16,19 @@
 .link--rows a:hover {
   color: var(--main-color);
 }
-.footer--icons {
+.footerIcons__facebook {
+  color: #3b5998;
   font-size: 2.4rem;
 }
-.footer--icons:nth-child(3) {
+.footerIcons__twitter {
+  color: #00acee;
+  font-size: 2.4rem;
+}
+.footerIcons__youtube {
+  color: #c4302b;
+  font-size: 2.4rem;
+}
+.footerIcons__instagram {
   background: radial-gradient(
     circle at 33% 100%,
     #fed373 4%,
@@ -28,8 +37,10 @@
     #9b36b7 85%,
     #515ecf
   );
+  font-size: 2.4rem;
   border-radius: 0.6rem;
 }
+
 @media screen and (max-width: 608px) {
   .link--rows {
     flex-direction: column;

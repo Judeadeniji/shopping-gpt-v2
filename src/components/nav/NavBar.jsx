@@ -2,6 +2,10 @@ import React, { useContext, useRef } from "react";
 import "./NavBar.css";
 import NavBarToggle from "./NavBarToggle";
 import { CartNumbersContext } from "../../contexts/CartNumbersContext";
+import { FaUserAlt } from "react-icons/fa";
+import { IoNotifications } from "react-icons/io5";
+import { BsCart4 } from "react-icons/bs";
+import { RiSearchLine } from "react-icons/ri";
 
 const NavBar = () => {
   //
@@ -32,16 +36,17 @@ const NavBar = () => {
         <form className="navlinks__col1">
           <input type="text" placeholder="search product" />
           <button className="search__product__btn">
-            <i className="fa-solid fa-magnifying-glass search__product__icon"></i>
+            <RiSearchLine className="search__product__icon" />
           </button>
         </form>
         {/* nav livks col 2 */}
         <div className="navlinks__col2">
-          <i className="fa-regular fa-bell nav__icon" />
-          <i className="fa-regular fa-user nav__icon" />
-          <i className="fa-solid fa-bag-shopping nav__icon__shopping__bag">
+          <IoNotifications className="nav__icon" />
+          <FaUserAlt className="nav__icon" />
+          <div className="nav__icon__shopping__bag">
+            <BsCart4 />
             <div className="cart__items__number">{cartItemNumber}</div>
-          </i>
+          </div>
         </div>
       </div>
       <NavBarToggle

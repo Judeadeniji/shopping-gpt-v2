@@ -14,9 +14,11 @@ nav {
 .navlinks__row {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 70%;
 }
 .navlinks__col1 {
+  width: 40%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,6 +28,7 @@ nav {
   border-radius: 1rem;
 }
 .navlinks__col1 input {
+  width: 100%;
   border: 0;
   outline: 0;
   background: transparent;
@@ -47,6 +50,7 @@ nav {
   width: 28px;
   font-size: 1.4rem;
   border-radius: 50%;
+  padding: 0.3rem;
 }
 .navlinks__col2 {
   display: flex;
@@ -99,5 +103,8 @@ nav {
   .navlinks__col2 {
     justify-content: center;
     gap: 3rem;
+  }
+  .navlinks__col1 {
+    width: 90%;
   }
 }

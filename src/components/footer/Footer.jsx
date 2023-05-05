@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   const copyRightDate = new Date().getFullYear();
@@ -26,19 +27,10 @@ const Footer = () => {
           marginBottom: "20px",
         }}
       >
-        <i
-          className="fa-brands fa-facebook footer--icons"
-          style={{ color: "#3b5998" }}
-        ></i>
-        <i
-          className="fa-brands fa-twitter footer--icons"
-          style={{ color: "#00acee" }}
-        ></i>
-        <i className="fa-brands fa-instagram footer--icons"></i>
-        <i
-          className="fa-brands fa-youtube footer--icons"
-          style={{ color: "#c4302b" }}
-        ></i>
+        <FaFacebook className="footerIcons__facebook" />
+        <FaTwitter className="footerIcons__twitter" />
+        <FaInstagram className="footerIcons__instagram" />
+        <FaYoutube className="footerIcons__youtube" />
       </div>
       <div className="link--rows">
         <Link to="">About</Link>

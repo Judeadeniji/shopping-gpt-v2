@@ -1,6 +1,7 @@
 import "./Tab.css";
 import { useRef, useState } from "react";
 import TabOpenBtn from "./TabOpenBtn";
+import { MdOutlineCancel } from "react-icons/md";
 
 const Tab = () => {
   const all_categories = useRef();
@@ -30,8 +31,7 @@ const Tab = () => {
             }}
           >
             <div>Filters</div>
-            <i
-              className="fas fa-times"
+            <MdOutlineCancel
               style={{ cursor: "pointer", color: "red" }}
               onClick={openTab}
             />

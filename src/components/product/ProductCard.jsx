@@ -2,10 +2,12 @@ import { useContext } from "react";
 import "./ProductCard.css";
 import { v4 as uuidv4 } from "uuid";
 import { CartNumbersContext } from "../../contexts/CartNumbersContext";
+import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   //
-  const { increItemNums } = useContext(CartNumbersContext);
+  const { increItemNums, cartItems, setCartItems } =
+    useContext(CartNumbersContext);
   // set product title limit
   const titleLimit = 20;
   const truncateTitle = (title) => {
@@ -15,19 +17,21 @@ const ProductCard = ({ product }) => {
     }
     return title;
   };
+  //
+  const saveCartItems = (value) => {
+    setCartItems();
+  };
+  // console.log(cartItems);
   // product review star display
   const productReviewStar = [1, 2, 3, 4, 5].map((rate) => (
     <span key={uuidv4()}>
-      <i
-        className={
-          product.rating.rate === rate + 0.5
-            ? "fas fa-star-half-alt"
-            : product.rating.rate >= rate
-            ? "fas fa-star"
-            : "far fa-star"
-        }
-        style={{ color: "rgb(255, 186, 24)" }}
-      />
+      {product.rating.rate === rate + 0.5 ? (
+        <FaStarHalfAlt className="review__star" />
+      ) : product.rating.rate >= rate ? (
+        <FaStar className="review__star" />
+      ) : (
+        <FaRegStar className="review__star" />
+      )}
     </span>
   ));
   //
@@ -48,7 +52,7 @@ const ProductCard = ({ product }) => {
               {product.rating.rate}&nbsp;Reviews
             </div>
           </div>
-          <button className="product__card__btn" onClick={increItemNums}>
+          <button className="product__card__btn" onClick={saveCartItems}>
             Add To Cart
           </button>
         </div>
