@@ -35,3 +35,14 @@
   padding: 1rem 2rem;
   border-radius: 1rem;
 }
+@media screen and (max-width: 574px) {
+  .cartDetails__context {
+    font-size: 1.4rem;
+  }
+  .cartDetails__price {
+    font-size: 1.6rem;
+  }
+  .cartDetails__img {
+    width: 75px;
+  }
+}
