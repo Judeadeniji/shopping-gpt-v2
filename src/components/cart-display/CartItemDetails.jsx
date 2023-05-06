@@ -12,7 +12,6 @@ const CartItemDetails = () => {
   const totalPrice = products
     .map((product) => product.price)
     .reduce((accumulator, price) => accumulator + price, 0);
-  console.log(totalPrice);
   return (
     <div className="cartDetails__wrapper">
       {products &&
