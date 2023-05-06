@@ -6,10 +6,24 @@ import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
 const ProductCard = ({ product }) => {
   //
-  const { saveCartItems, cartItems, setCartItems } =
-    useContext(CartNumbersContext);
+  const { cartItems, setCartItems } = useContext(CartNumbersContext);
   //
-  console.log(cartItems);
+  const saveCartItems = () => {
+    const saveItems = [
+      ...cartItems,
+      {
+        title: product.title,
+        id: product.id,
+        img: product.image,
+        desc: product.description,
+        price: product.price,
+        ratingNum: product.rating.rate,
+        reviewNum: product.rating.count,
+        category: product.category,
+      },
+    ];
+    setCartItems(saveItems);
+  };
   // set product title limit
   const titleLimit = 20;
   const truncateTitle = (title) => {
@@ -49,6 +63,9 @@ const ProductCard = ({ product }) => {
             {productReviewStar}
             <div className="product__card__reviews">
               {product.rating.rate}&nbsp;Reviews
+            </div>
+            <div className="product__card__reviews">
+              {product.rating.count}&nbsp;People
             </div>
           </div>
           <button

@@ -9,7 +9,7 @@ const ProductItems = () => {
     data: products,
     isLoading,
     error,
-  } = useFetch("https://fakestoreapi.com/products");
+  } = useFetch("https://fakestoreapi.com/products", { mode: "no-cors" });
   return (
     <section className="product__items">
       {isLoading && <img src={loaderGif} className="display__loading" />}

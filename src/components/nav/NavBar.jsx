@@ -9,7 +9,7 @@ import { RiSearchLine } from "react-icons/ri";
 
 const NavBar = () => {
   //
-  const { cartItems } = useContext(CartNumbersContext);
+  const { cartItems, cartOpen, openCart } = useContext(CartNumbersContext);
   //
   const navlinks__row = useRef();
   const burgerOne = useRef();
@@ -29,7 +29,7 @@ const NavBar = () => {
     }
   });
   return (
-    <nav className="nav">
+    <nav>
       <div className="nav__logo">Shopping GPT</div>
       <div className="navlinks__row" ref={navlinks__row}>
         {/* nav livks col 1 */}
@@ -43,7 +43,7 @@ const NavBar = () => {
         <div className="navlinks__col2">
           <IoNotifications className="nav__icon" />
           <FaUserAlt className="nav__icon" />
-          <div className="nav__icon__shopping__bag">
+          <div className="nav__icon__shopping__bag" onClick={openCart}>
             <BsCart4 />
             <div className="cart__items__number">{cartItems.length}</div>
           </div>

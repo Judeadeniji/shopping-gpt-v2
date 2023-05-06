@@ -42,7 +42,7 @@
   padding: 0.8rem 1rem;
   border-radius: 1rem;
   color: var(--light-color);
-  align-self: start;
+  align-self: center;
   transition: 0.4s;
   cursor: pointer;
 }
