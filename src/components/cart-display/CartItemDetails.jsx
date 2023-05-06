@@ -9,6 +9,10 @@ const CartItemDetails = () => {
     const newCartItems = products.filter((product) => product.id !== id);
     setCartItems(newCartItems);
   };
+  const totalPrice = products
+    .map((product) => product.price)
+    .reduce((accumulator, price) => accumulator + price, 0);
+  console.log(totalPrice);
   return (
     <div className="cartDetails__wrapper">
       {products &&
@@ -27,6 +31,13 @@ const CartItemDetails = () => {
             </button>
           </div>
         ))}
+      <div className="totalPrice__checkOut">
+        <div className="cartDetails__totalPrice">
+          <h3 className="cartDetails__totalPrrice__h3">Total Price</h3>
+          <div className="cartDetails__totalPrice__sum">${totalPrice}</div>
+        </div>
+        <button className="checkout__btn">Checkout</button>
+      </div>
     </div>
   );
 };
