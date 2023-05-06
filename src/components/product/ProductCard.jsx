@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { CartNumbersContext } from "../../contexts/CartNumbersContext";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, succMsg }) => {
   //
   const { cartItems, setCartItems } = useContext(CartNumbersContext);
   //
@@ -22,7 +22,12 @@ const ProductCard = ({ product }) => {
         category: product.category,
       },
     ];
+    succMsg.current.classList.add("toggleSuccMsg");
     setCartItems(saveItems);
+    setTimeout(() => {
+      succMsg.current.classList.remove("toggleSuccMsg");
+    }, 2000);
+    //
   };
   // set product title limit
   const titleLimit = 20;

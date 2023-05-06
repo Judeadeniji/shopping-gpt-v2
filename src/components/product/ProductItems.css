@@ -22,6 +22,26 @@
 .display__error {
   font-weight: 300;
 }
+/*  */
+/*  */
+.succMsg {
+  position: absolute;
+  top: -2000px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 554;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: var(--light-color);
+  box-shadow: 0 0 0 1.3px #c0c0c0;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+  color: rgb(1, 117, 1);
+  transition: 0.4s;
+}
+/*  */
 @media screen and (max-width: 1074px) {
   .product__items {
     grid-template-columns: repeat(2, 1fr);
