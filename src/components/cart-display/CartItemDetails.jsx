@@ -9,9 +9,12 @@ const CartItemDetails = () => {
     const newCartItems = products.filter((product) => product.id !== id);
     setCartItems(newCartItems);
   };
+  // The total amount of the total items in the cart
   const totalPrice = products
     .map((product) => product.price)
     .reduce((accumulator, price) => accumulator + price, 0);
+  // returning the total price to the nearest decimal point to avoid too much numbers after decimal point.
+  const totalAmount = Math.floor(totalPrice * 10) / 10;
   return (
     <div className="cartDetails__wrapper">
       {products &&
@@ -33,7 +36,7 @@ const CartItemDetails = () => {
       <div className="totalPrice__checkOut">
         <div className="cartDetails__totalPrice">
           <h3 className="cartDetails__totalPrrice__h3">Total Price</h3>
-          <div className="cartDetails__totalPrice__sum">${totalPrice}</div>
+          <div className="cartDetails__totalPrice__sum">${totalAmount}</div>
         </div>
         <button className="checkout__btn">Checkout</button>
       </div>
