@@ -2,8 +2,12 @@ import React, { useContext } from "react";
 import { CartNumbersContext } from "../../contexts/CartNumbersContext";
 import "./CartItemDetails.css";
 import { v4 as uuidv4 } from "uuid";
+import { useNavigate } from "react-router-dom";
 
 const CartItemDetails = () => {
+  //
+  const navigate = useNavigate();
+  //
   const { cartItems: products, setCartItems } = useContext(CartNumbersContext);
   const removeCartItem = (id) => {
     const newCartItems = products.filter((product) => product.id !== id);
@@ -38,7 +42,9 @@ const CartItemDetails = () => {
           <h3 className="cartDetails__totalPrrice__h3">Total Price</h3>
           <div className="cartDetails__totalPrice__sum">${totalAmount}</div>
         </div>
-        <button className="checkout__btn">Checkout</button>
+        <button className="checkout__btn" onClick={navigate("/")}>
+          Checkout
+        </button>
       </div>
     </div>
   );

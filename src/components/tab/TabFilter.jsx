@@ -4,7 +4,9 @@ import "./TabFilter.css";
 const TabFilter = () => {
   return (
     <div className="tabFilter__container">
-      <div className="tabFilter__box"></div>
+      <div className="tabFilter__box">
+        <h2 className="tabFilter__h2">Filter Products</h2>
+      </div>
     </div>
   );
 };

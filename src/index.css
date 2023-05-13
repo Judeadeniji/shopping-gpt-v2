@@ -17,6 +17,7 @@
 }
 a {
   text-decoration: none !important;
+  color: inherit;
 }
 html {
   font-size: 62.5%;

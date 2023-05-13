@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import "./NavBar.css";
 import NavBarToggle from "./NavBarToggle";
 import { CartNumbersContext } from "../../contexts/CartNumbersContext";
@@ -7,13 +7,20 @@ import { IoNotifications } from "react-icons/io5";
 import { BsCart4 } from "react-icons/bs";
 import { RiSearchLine } from "react-icons/ri";
 import { ProductContext } from "../../contexts/ProductContext";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-  const { data, setData } = useContext(ProductContext);
-  console.log(data);
+  const {
+    data: products,
+    setData,
+    handleFilterProduct,
+    searchText,
+    setSearchText,
+  } = useContext(ProductContext);
   //
   const { cartItems, cartOpen, openCart } = useContext(CartNumbersContext);
   //
+
   const navlinks__row = useRef();
   const burgerOne = useRef();
   const burgerTwo = useRef();
@@ -33,11 +40,17 @@ const NavBar = () => {
   });
   return (
     <nav>
-      <div className="nav__logo">Shopping GPT</div>
+      <Link to="/" className="nav__logo">
+        Shopping GPT
+      </Link>
       <div className="navlinks__row" ref={navlinks__row}>
         {/* nav livks col 1 */}
-        <form className="navlinks__col1">
-          <input type="text" placeholder="search product" />
+        <form className="navlinks__col1" onSubmit={handleFilterProduct}>
+          <input
+            type="text"
+            placeholder="search product"
+            onChange={(e) => setSearchText(e.target.value)}
+          />
           <button className="search__product__btn">
             <RiSearchLine className="search__product__icon" />
           </button>

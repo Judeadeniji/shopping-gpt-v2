@@ -7,6 +7,7 @@ import useFetch from "./hooks/useFetch";
 import { useContext } from "react";
 import { CartNumbersContext } from "./contexts/CartNumbersContext";
 import CartItems from "./components/cart-display/CartItems";
+import MoreInfo from "./pages/MoreInfo";
 
 function App() {
   const { data } = useFetch("https://fakestoreapi.com/products");
@@ -21,7 +22,8 @@ function App() {
           </div>
           {cartOpen === true ? <CartItems /> : <></>}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" exact element={<Home />} />
+            <Route path="/product" exact element={<MoreInfo />} />
           </Routes>
         </div>
         <Footer />

@@ -1,4 +1,10 @@
 .tabFilter__box {
-  background: var(--main-color);
+  padding: 1.5rem 1.5rem;
+  background: var(--dark-color);
   height: 100vh;
+  color: var(--light-color);
+}
+.tabFilter__h2 {
+  font-weight: 400;
+  text-align: center;
 }

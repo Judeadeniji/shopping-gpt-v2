@@ -4,9 +4,14 @@ import { v4 as uuidv4 } from "uuid";
 import { CartNumbersContext } from "../../contexts/CartNumbersContext";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
+import { useNavigate } from "react-router-dom";
+
 const ProductCard = ({ product, succMsg }) => {
   //
+  const navigate = useNavigate();
+  //
   const { cartItems, setCartItems } = useContext(CartNumbersContext);
+
   //
   const saveCartItems = () => {
     const saveItems = [

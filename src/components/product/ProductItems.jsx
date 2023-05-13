@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import useFetch from "../../hooks/useFetch";
 import ProductCard from "./ProductCard";
 import "./ProductItems.css";
@@ -11,6 +11,7 @@ const ProductItems = () => {
     isLoading,
     error,
   } = useFetch("https://fakestoreapi.com/products", { mode: "no-cors" });
+
   const succMsg = useRef();
   return (
     <section className="product__items">
