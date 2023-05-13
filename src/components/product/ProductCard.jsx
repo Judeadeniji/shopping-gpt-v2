@@ -69,9 +69,6 @@ const ProductCard = ({ product, succMsg }) => {
             <div className="product__card__reviews">
               {product.rating.rate}&nbsp;Reviews
             </div>
-            <div className="product__card__reviews">
-              {product.rating.count}&nbsp;People
-            </div>
           </div>
           <button
             className="product__card__btn"

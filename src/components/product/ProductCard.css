@@ -1,5 +1,4 @@
 .product__card {
-  width: 32rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +6,7 @@
   gap: 1.5rem;
   box-shadow: 0 0 0 1.5px rgba(134, 142, 150, 0.182);
   border-radius: 1rem;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   background: #fff;
   cursor: pointer;
 }
@@ -28,12 +27,13 @@
 }
 .product__card__price {
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 .product__card__reviewAndBtn {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 3.5rem;
 }
 .product__card__btn {
   background: var(--main-color);

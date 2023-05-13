@@ -44,7 +44,10 @@ const Footer = () => {
         className="last--footer"
         style={{ fontWeight: "300", fontSize: "18px" }}
       >
-        <Link to={myTwitter}>JamexTech&nbsp;</Link>&copy;&nbsp;
+        <Link to={myTwitter} className="jamex__tech">
+          JamexTech&nbsp;
+        </Link>
+        &copy;&nbsp;
         {copyRightDate}
       </p>
     </div>

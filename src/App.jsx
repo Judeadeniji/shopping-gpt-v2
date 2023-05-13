@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/nav/Header";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
-import Tab from "./components/tab/Tab";
 import imgOne from "./assets/images/img-1.png";
 import useFetch from "./hooks/useFetch";
 import { useContext } from "react";
@@ -18,7 +17,6 @@ function App() {
         <Header />
         <div className="main__container">
           <div className="wrap__tab">
-            <Tab />
             {data && <img src={imgOne} className="ad__img" />}
           </div>
           {cartOpen === true ? <CartItems /> : <></>}

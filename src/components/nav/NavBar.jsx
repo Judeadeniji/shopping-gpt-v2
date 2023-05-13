@@ -6,8 +6,11 @@ import { FaUserAlt } from "react-icons/fa";
 import { IoNotifications } from "react-icons/io5";
 import { BsCart4 } from "react-icons/bs";
 import { RiSearchLine } from "react-icons/ri";
+import { ProductContext } from "../../contexts/ProductContext";
 
 const NavBar = () => {
+  const { data, setData } = useContext(ProductContext);
+  console.log(data);
   //
   const { cartItems, cartOpen, openCart } = useContext(CartNumbersContext);
   //

@@ -1,6 +1,10 @@
 header {
+  position: sticky;
+  top: 0;
   padding: 1.8rem 4rem;
-  margin-bottom: 8.5rem;
+  margin-bottom: 1rem;
+  z-index: 90;
+  background: var(--light-color);
 }
 @media screen and (max-width: 576px) {
   header {

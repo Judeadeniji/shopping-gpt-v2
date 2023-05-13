@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ProductContext } from "../contexts/ProductContext";
 
 const useFetch = (url) => {
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { data, setData, isLoading, setIsLoading, error, setError } =
+    useContext(ProductContext);
   async function getData(url) {
     try {
       const res = await fetch(url);

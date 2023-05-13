@@ -67,40 +67,6 @@ svg {
   transform: rotate(45deg) translate(0, -8px);
 }
 .ad__img {
-  width: 950px;
-  position: absolute;
-  top: -75px;
-  right: 5%;
-  z-index: 534;
-  transition: 0.4;
-}
-@media screen and (max-width: 1100px) {
-  .ad__img {
-    width: 700px;
-    top: -70px;
-  }
-}
-@media screen and (max-width: 840px) {
-  .ad__img {
-    width: 580px;
-    top: -65px;
-  }
-}
-@media screen and (max-width: 686px) {
-  .ad__img {
-    width: 480px;
-    top: -60px;
-  }
-}
-@media screen and (max-width: 569px) {
-  .ad__img {
-    width: 380px;
-    top: -55px;
-  }
-}
-@media screen and (max-width: 465px) {
-  .ad__img {
-    width: 290px;
-    top: -50px;
-  }
+  width: 100%;
+  margin-bottom: 1.5rem;
 }

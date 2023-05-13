@@ -40,6 +40,10 @@
   font-size: 2.4rem;
   border-radius: 0.6rem;
 }
+.jamex__tech {
+  color: var(--light-color);
+  text-decoration: underline !important;
+}
 
 @media screen and (max-width: 608px) {
   .link--rows {
