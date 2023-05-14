@@ -1,8 +1,21 @@
 .product__row {
+  position: relative;
   display: grid;
   grid-template-columns: 220px 1fr;
   align-items: start;
   gap: 2rem;
+}
+.close__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.374);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 @media screen and (max-width: 808px) {
   .product__row {

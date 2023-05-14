@@ -5,11 +5,14 @@ import "./index.css";
 
 import CartNumbersContextProvider from "./contexts/CartNumbersContext.jsx";
 import ProductContextProvider from "./contexts/ProductContext.jsx";
+import RefContextProvider from "./contexts/RefContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ProductContextProvider>
     <CartNumbersContextProvider>
-      <App />
+      <RefContextProvider>
+        <App />
+      </RefContextProvider>
     </CartNumbersContextProvider>
   </ProductContextProvider>
 );

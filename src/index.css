@@ -71,3 +71,12 @@ svg {
   width: 100%;
   margin-bottom: 1.5rem;
 }
+/*  */
+/*  */
+/*  */
+.toggleFilterTab.tabFilter__box {
+  left: 0;
+}
+.toggleFilterTab.catToggle {
+  display: none;
+}

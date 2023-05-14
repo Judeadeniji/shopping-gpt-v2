@@ -2,6 +2,7 @@
   position: relative;
 }
 .tabFilter__box {
+  margin-left: 1.5rem;
   padding: 1.5rem 1.5rem;
   background: var(--dark-color);
   height: 100vh;
@@ -31,6 +32,8 @@
   .tabFilter__box {
     position: fixed;
     left: -1000px;
+    z-index: 45;
     transition: 0.6s !important;
   }
 }
+
