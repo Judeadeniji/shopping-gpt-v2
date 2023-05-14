@@ -5,6 +5,7 @@ header {
   margin-bottom: 1rem;
   z-index: 90;
   background: var(--light-color);
+  box-shadow: 0 1.5px 8px rgba(54, 79, 199, 0.25);
 }
 @media screen and (max-width: 576px) {
   header {

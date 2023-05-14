@@ -51,10 +51,11 @@
 @media screen and (max-width: 1040px) {
   .product__items {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
-@media screen and (max-width: 815px) {
+@media screen and (max-width: 650px) {
   .product__items {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }

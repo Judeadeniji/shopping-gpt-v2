@@ -1,3 +1,6 @@
+.tabFilter__container {
+  position: relative;
+}
 .tabFilter__box {
   padding: 1.5rem 1.5rem;
   background: var(--dark-color);
@@ -7,4 +10,27 @@
 .tabFilter__h2 {
   font-weight: 400;
   text-align: center;
+  margin-bottom: 2rem;
+}
+.catToggle {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  background: var(--main-color);
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  width: 100px;
+  color: var(--light-color);
+}
+@media screen and (max-width: 808px) {
+  .catToggle {
+    display: flex;
+  }
+  .tabFilter__box {
+    position: fixed;
+    left: -1000px;
+    transition: 0.6s !important;
+  }
 }

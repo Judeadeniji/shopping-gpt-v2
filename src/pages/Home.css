@@ -6,6 +6,6 @@
 }
 @media screen and (max-width: 808px) {
   .product__row {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 80px 1fr;
   }
 }
