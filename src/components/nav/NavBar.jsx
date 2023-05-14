@@ -33,9 +33,7 @@ const NavBar = () => {
   };
   document.addEventListener("scroll", () => {
     if (scrollY > 20) {
-      navlinks__row.current.style.top = "0";
-    } else if (scrollY === 0) {
-      navlinks__row.current.style.top = "65px";
+      navlinks__row.current.style.top = "49px";
     }
   });
   return (

@@ -42,9 +42,7 @@ const CartItemDetails = () => {
           <h3 className="cartDetails__totalPrrice__h3">Total Price</h3>
           <div className="cartDetails__totalPrice__sum">${totalAmount}</div>
         </div>
-        <button className="checkout__btn" onClick={navigate("/")}>
-          Checkout
-        </button>
+        <button className="checkout__btn">Checkout</button>
       </div>
     </div>
   );

@@ -38,6 +38,7 @@
   transition: 0.4s;
   cursor: pointer;
   color: #fa3e3e;
+  user-select: none;
 }
 .cartItem__closeBtn:hover {
   transform: rotate(360deg);
