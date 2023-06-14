@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import "./TabFilter.css";
 import TabFilterForm from "./TabFilterForm";
 import { HiOutlineChevronDown } from "react-icons/hi";
@@ -13,6 +13,22 @@ const TabFilter = ({ close__overlay }) => {
     close__overlay.current.style.visibility = "visible";
     close__overlay.current.style.pointerEvents = "all";
   };
+
+  //
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 200) {
+        cat__toggle.current.style.top = "15%";
+        filter__box.current.style.top = "10%";
+      } else {
+        cat__toggle.current.style.top = "20%";
+        filter__box.current.style.top = "18%";
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
+  //
   return (
     <div className="tabFilter__container">
       <div
