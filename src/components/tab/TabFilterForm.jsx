@@ -1,6 +1,6 @@
 import React from "react";
 import "./TabFilterForm.css";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 const TabFilterForm = () => {
   return (
@@ -45,6 +45,7 @@ const TabFilterForm = () => {
         <Form.Label className="form__labels">Food Items</Form.Label>
         <Form.Control type="checkbox"></Form.Control>
       </Form.Group>
+      <div className="filter__btn">Apply Filter</div>
     </Form>
   );
 };
