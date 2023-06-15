@@ -101,13 +101,19 @@ const MoreInfo = () => {
             <div className="buyNow__quantity">
               {/*  */}
               <div className="product__quantity">
-                <button className="quantity__btn" onClick={handleDecreQuantity}>
+                <button
+                  className="quantity__btn quantity__btn__minus"
+                  onClick={handleDecreQuantity}
+                >
                   <FaMinus className="decre__btn" />
                 </button>
                 <div className="total__quantity">
                   <div className="total__quantity__number">{totalQuantity}</div>
                 </div>
-                <button className="quantity__btn" onClick={handleIncreQuantity}>
+                <button
+                  className="quantity__btn quantity__btn__plus"
+                  onClick={handleIncreQuantity}
+                >
                   <FaPlus className="incre__btn" />
                 </button>
               </div>
