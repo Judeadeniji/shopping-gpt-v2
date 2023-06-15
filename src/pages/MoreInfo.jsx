@@ -89,7 +89,9 @@ const MoreInfo = () => {
             <div className="product__desc">{product.description}</div>
             {/*  */}
             <div className="product__info__price">
-              <p className="initial__price">${product.price + 20.5}</p>
+              <p className="initial__price">
+                ${Math.round(product.price * 10) / 10 + 20.5}
+              </p>
               <div className="current__price">${product.price}</div>
             </div>
             {/*  */}

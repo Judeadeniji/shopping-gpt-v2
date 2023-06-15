@@ -1,7 +1,8 @@
 .more__info__section {
   position: relative;
-  padding: 0 6rem;
+  padding: 2rem 6rem;
   margin-top: 2rem;
+  background: #fff;
 }
 .product__info__row {
   width: 70%;
@@ -60,6 +61,8 @@
 }
 .initial__price {
   text-decoration: line-through;
+  color: rgb(233, 82, 100);
+  font-weight: 100;
 }
 .quantity__note {
   display: flex;
@@ -126,7 +129,7 @@
 /*  */
 @media screen and (max-width: 768px) {
   .more__info__section {
-    padding: 0 2rem;
+    padding: 2rem 2rem;
   }
   .product__img {
     width: 75%;
