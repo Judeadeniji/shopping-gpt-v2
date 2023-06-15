@@ -42,18 +42,27 @@
   color: rgb(1, 117, 1);
   transition: 0.4s;
 }
+
 /*  */
 @media screen and (max-width: 1240px) {
   .product__items {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/*  */
 @media screen and (max-width: 1040px) {
   .product__items {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 4.5rem;
   }
 }
+
+/*  */
+@media screen and (max-width: 808px) {
+}
+
+/*  */
 @media screen and (max-width: 650px) {
   .product__items {
     grid-template-columns: 1fr;

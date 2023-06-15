@@ -31,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.7rem;
   background: var(--grey-one);
 }
 body::-webkit-scrollbar-thumb {
@@ -40,6 +40,14 @@ body::-webkit-scrollbar-thumb {
 }
 img {
   width: 100%;
+}
+@font-face {
+  font-family: maston-regular;
+  src: url("./assets/fonts/MRKMaston-Regular.ttf");
+}
+@font-face {
+  font-family: maston-bold;
+  src: url("./assets/fonts/MRKMaston-Bold.ttf");
 }
 img,
 svg {
