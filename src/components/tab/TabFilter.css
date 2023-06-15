@@ -1,5 +1,6 @@
 .tabFilter__container {
   position: relative;
+  justify-self: start;
 }
 .tabFilter__box {
   margin-left: 1.5rem;
@@ -16,6 +17,7 @@
 
 .catToggle {
   margin-bottom: 1rem;
+  margin-top: -50px;
   margin-left: 1rem;
   background: var(--main-color);
   display: none;
@@ -29,8 +31,7 @@
   user-select: none;
   transition: 0.5s ease-in-out;
   position: fixed;
-  top: 22%;
-  left: -1%;
+
   z-index: 99;
 }
 @media screen and (max-width: 808px) {

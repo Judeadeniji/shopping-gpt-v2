@@ -23,7 +23,7 @@ function App() {
           {cartOpen === true ? <CartItems /> : <></>}
           <Routes>
             <Route path="/" exact element={<Home />} />
-            <Route path="/product" exact element={<MoreInfo />} />
+            <Route path="/product/:id" exact element={<MoreInfo />} />
           </Routes>
         </div>
         <Footer />

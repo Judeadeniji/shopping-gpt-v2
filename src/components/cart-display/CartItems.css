@@ -12,12 +12,7 @@
   overflow-y: scroll;
 }
 .cartItem__wrapper::-webkit-scrollbar {
-  width: 1rem;
-  background: #393939;
-}
-.cartItem__wrapper::-webkit-scrollbar-thumb {
-  background: var(--main-color);
-  border-radius: 1rem;
+  width: 0;
 }
 .cartDetailsWrapper {
   position: relative;
@@ -41,7 +36,7 @@
   user-select: none;
 }
 .cartItem__closeBtn:hover {
-  transform: rotate(360deg);
+  transform: scale(1.15);
 }
 .empty__cart {
   position: absolute;

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { CartNumbersContext } from "../../contexts/CartNumbersContext";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product, succMsg }) => {
   //
@@ -59,7 +59,7 @@ const ProductCard = ({ product, succMsg }) => {
   ));
   //
   return (
-    <div className="product__card">
+    <Link className="product__card" to={`/product/${product.id}`}>
       <div className="product__card__image">
         <img src={product.image} alt="" className="product__card__img" />
       </div>
@@ -83,7 +83,7 @@ const ProductCard = ({ product, succMsg }) => {
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

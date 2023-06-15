@@ -22,7 +22,7 @@ const TabFilter = ({ close__overlay }) => {
         filter__box.current.style.top = "10%";
       } else {
         cat__toggle.current.style.top = "20%";
-        filter__box.current.style.top = "18%";
+        filter__box.current.style.top = "12%";
       }
     };
     window.addEventListener("scroll", handleScroll);
