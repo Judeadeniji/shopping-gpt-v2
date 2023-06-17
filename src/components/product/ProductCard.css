@@ -1,4 +1,5 @@
 .product__card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,6 +10,15 @@
   padding: 1rem 2rem;
   background: #fff;
   cursor: pointer;
+}
+.product__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78%;
+  background: transparent;
+  border-radius: 1rem 1rem 0 0;
 }
 .product__card__image {
   display: flex;
@@ -55,5 +65,20 @@
   color: rgb(255, 186, 24);
 }
 .toggleSuccMsg.succMsg {
-  top: 60px;
+  top: 90px;
+  animation: animateSuccMsg 0.5s ease-in-out;
+}
+@keyframes animateSuccMsg {
+  0% {
+    transform: scale(1.01) translateX(-50%);
+  }
+  50% {
+    transform: scale(1.2) translateX(-50%);
+  }
+  70% {
+    transform: scale(1.18) translateX(-50%);
+  }
+  100% {
+    transform: scale(1) translateX(-50%);
+  }
 }

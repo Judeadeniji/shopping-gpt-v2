@@ -59,7 +59,8 @@ const ProductCard = ({ product, succMsg }) => {
   ));
   //
   return (
-    <Link className="product__card" to={`/product/${product.id}`}>
+    <div className="product__card">
+      <Link className="product__link" to={`/product/${product.id}`}></Link>
       <div className="product__card__image">
         <img src={product.image} alt="" className="product__card__img" />
       </div>
@@ -83,7 +84,7 @@ const ProductCard = ({ product, succMsg }) => {
           </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

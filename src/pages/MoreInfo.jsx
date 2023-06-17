@@ -33,7 +33,9 @@ const MoreInfo = () => {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const res = await fetch(`https://fakestoreapi.com/products/${id}`, {
+          cors: true,
+        });
         const data = await res.json();
         setProduct(data);
         setIsLoading(false);
