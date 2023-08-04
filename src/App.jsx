@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/nav/Header";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
@@ -16,6 +16,7 @@ function App() {
     <div className="app__container">
       <BrowserRouter>
         <Header />
+        <GetToTopOnRender/>
         <div className="main__container">
           <div className="wrap__tab">
             {data && <img src={imgOne} className="ad__img" />}
@@ -33,3 +34,14 @@ function App() {
 }
 
 export default App;
+
+//Scroll To Top Component
+
+export const GetToTopOnRender = () => {
+  const pathname = useLocation()
+  useEffect(()=>{
+    window.scrollTo({top:0, left:0, behavior: "smooth"})
+  },[pathname]);
+
+return null;
+}
