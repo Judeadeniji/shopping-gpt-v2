@@ -1,8 +1,9 @@
 import {useEffect} from "react"
-import {location} from "react-router-dom"
+import {useLocation} from "react-router-dom"
 
 const GetToTopOnRender = () => {
-  const pathname = location.pathname
+  const location = useLocation()
+  const {pathname} = location
   useEffect(()=>{
     window.scrollTo(0,0)
   },[pathname])
