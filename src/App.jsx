@@ -12,11 +12,12 @@ import MoreInfo from "./pages/MoreInfo";
 function App() {
   const { data } = useFetch("https://fakestoreapi.com/products");
   const { cartOpen } = useContext(CartNumbersContext);
+  const pathname = useLocation()
   return (
     <div className="app__container">
       <BrowserRouter>
         <Header />
-        <GetToTopOnRender/>
+        <GetToTopOnRender pathname={pathname}/>
         <div className="main__container">
           <div className="wrap__tab">
             {data && <img src={imgOne} className="ad__img" />}
@@ -37,8 +38,7 @@ export default App;
 
 //Scroll To Top Component
 
-export const GetToTopOnRender = () => {
-  const pathname = useLocation()
+export const GetToTopOnRender = ({pathname}) => {
   useEffect(()=>{
     window.scrollTo({top:0, left:0, behavior: "smooth"})
   },[pathname]);
