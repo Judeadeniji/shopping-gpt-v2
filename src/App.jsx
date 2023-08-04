@@ -8,17 +8,14 @@ import { useContext } from "react";
 import { CartNumbersContext } from "./contexts/CartNumbersContext";
 import CartItems from "./components/cart-display/CartItems";
 import MoreInfo from "./pages/MoreInfo";
-import GetToTopOnRender from "./components/get-to-top/GetToTopOnRender"
-
 function App() {
   const { data } = useFetch("https://fakestoreapi.com/products");
   const { cartOpen } = useContext(CartNumbersContext);
-  const pathname = useLocation()
+ 
   return (
     <div className="app__container">
       <BrowserRouter>
         <Header />
-        <GetToTopOnRender/>
         <div className="main__container">
           <div className="wrap__tab">
             {data && <img src={imgOne} className="ad__img" />}
