@@ -1,21 +1,22 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/nav/Header";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
 import imgOne from "./assets/images/img-1.png";
 import useFetch from "./hooks/useFetch";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartNumbersContext } from "./contexts/CartNumbersContext";
 import CartItems from "./components/cart-display/CartItems";
 import MoreInfo from "./pages/MoreInfo";
 function App() {
   const { data } = useFetch("https://fakestoreapi.com/products");
   const { cartOpen } = useContext(CartNumbersContext);
- 
+
   return (
     <div className="app__container">
       <BrowserRouter>
         <Header />
+        <GetToTop />
         <div className="main__container">
           <div className="wrap__tab">
             {data && <img src={imgOne} className="ad__img" />}
@@ -33,3 +34,12 @@ function App() {
 }
 
 export default App;
+
+// get to top component
+
+export const GetToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    scrollTo(0, 0);
+  }, [pathname]);
+};
